@@ -209,7 +209,7 @@ const SmallVideoCard = ({ videoId,videoUrl,isShowingOnHome=false,likes,caption,o
 
   return (
     <>
-    <div className='w-[180px] md:w-[230px] mx-2'>
+    <div className='w-[230px] md:w-[270px] mx-2'>
         <Link to={`/profile/${ownerId}`} >
         <div className="flex flex-row pt-1">
             <Image className='rounded-full h-[30px] w-[30px] md:w-[40px] md:h-[40px] '
