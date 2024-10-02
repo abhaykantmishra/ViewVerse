@@ -9,7 +9,7 @@ function RootLayout() {
   const [isAuthenticate , setAuth] = useState(false)
   const navigate = useNavigate();
   const pathname = window.location.pathname;
-  const verifyUrl = "/api/v1/user/verifyuser"
+  const verifyUrl = `${import.meta.env.VITE_BASE_URL}/api/v1/user/verifyuser`
   useEffect( ()=>{
     const token = localStorage.getItem("accessToken");
     const userId = localStorage.getItem("userId");
@@ -31,7 +31,7 @@ function RootLayout() {
     <div className='w-full flex flex-wrap'>
       <Navbar/>
       <Sidebar/>
-      <section className='flex flex-1 h-full ml-10'>
+      <section className='flex flex-1 h-full ml-2'>
         <Outlet/>
       </section>
     </div>

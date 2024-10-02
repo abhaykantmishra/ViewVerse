@@ -9,9 +9,11 @@ import VideoCard from './VideoCard';
 
 
 const Search = () => {
-    const searchTerm = useLocation().pathname.split('/')[2];
-  const allUserUrl = "/api/v1/user/allusers"
-  const allVideosUrl = "/api/v1/video/getallvideos";
+
+  const searchTerm = useLocation().pathname.split('/')[2];
+  const allUserUrl = `${import.meta.env.VITE_BASE_URL}/api/v1/user/allusers`
+  const allVideosUrl = `${import.meta.env.VITE_BASE_URL}/api/v1/video/getallvideos`;
+
   const [isAccounts, setIsAccounts] = useState(true);
   const [allUsers , setAllusers] = useState([]);
   const [videos , setAllVideos] = useState([]);
@@ -25,10 +27,11 @@ const Search = () => {
         console.log(err);
      })
    }
+
   async function getAllVideos(){
-    await axios.get(allVideosUrl)
+    await axios.post(allVideosUrl,{query:searchTerm})
     .then((res)=>{ 
-       setAllVideos([...res.data.allVideos])
+       setAllVideos([...res.data.videos])
     })
     .catch((err)=>{
         console.log(err);
@@ -38,7 +41,7 @@ const Search = () => {
   useEffect(() => {
    getAllUsers();
    getAllVideos();
-  }, []);
+  }, [searchTerm]);
   
   
   
