@@ -36,7 +36,7 @@ const Bottombar = () => {
       {
         isDrawerOpen ? (
           <>
-          <div className='absolute bottom-[5px] bg-gray-600 rounded-md'>
+          <div className='absolute bottom-[5px] bg-gray-900 rounded-md'>
            <Discover />
           </div>
           </>
