@@ -44,7 +44,7 @@ function RootLayout() {
         <div className='fixed left-0' > <Sidebar /> </div>
         <div className='xl:ml-56 md:ml-20 justify-center mx-auto' > <Outlet /> </div>
       </div>
-      <div className='mt-20 md:hidden flex flex-col relative'>
+      <div className='mt-[75px] md:hidden flex flex-col relative'>
         <div className='ml-10 px-auto my-auto' > <Outlet /> </div>
         <div className='fixed w-full bg-black z-10 bottom-0' > <Bottombar /> </div>
       </div>
