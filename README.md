@@ -49,6 +49,14 @@ A full-stack short video sharing and streaming platform inspired by modern socia
 
 └── backend/         # Node.js + Express + MongoDB
 
+---
+
+##  Architecture diagram
+
+![arch dia](https://www.mermaidchart.com/raw/39bfb2aa-d482-45c6-8a84-97578d8fdcc0?theme=light&version=v0.1&format=svg)
+
+---
+
 
 ## 🎯 Future Roadmap
 - 🔔 Real-Time Notifications
